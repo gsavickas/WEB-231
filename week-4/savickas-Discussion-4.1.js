@@ -14,10 +14,10 @@ var headerValue = header.display("Grayton", "Savickas", "Arrays")
 console.log(headerValue);
 
 // Array that stores ints 1 through 5
-let testArray1 = [1 2 3 4 5];
+let testArray1 = [1, 2, 3, 4, 5];
 
 // Array that stores all numbers 1 through 9 via the "..." iterable operator
-let testArray2 = [...1239];
+let testArray2 = [..."123456789"];
 
 // Output
 console.log(testArray1);
