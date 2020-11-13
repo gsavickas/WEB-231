@@ -5,6 +5,7 @@
 ; Date:   31 Oct 2020
 ; Modified By: Grayton Savickas
 ; Description: Displays two arrays with different values
+; Attribution: JavaScript: The Definitive Guide, 7th Edition by David Flanagan Published by O'Reilly Media, Inc., 2020 
 ;===========================================
 */
 const header = require('../week-2/Savickas-header')
@@ -18,5 +19,6 @@ let testArray1 = [1 2 3 4 5];
 // Array that stores all numbers 1 through 9 via the "..." iterable operator
 let testArray2 = [...1239];
 
+// Output
 console.log(testArray1);
 console.log(testArray2);
