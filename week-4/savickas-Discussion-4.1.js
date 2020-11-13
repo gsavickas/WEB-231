@@ -2,7 +2,7 @@
 ============================================
 ; Title:  header.js
 ; Author: Professor Krasso
-; Date:   31 Oct 2020
+; Date:   12 Nov 2020
 ; Modified By: Grayton Savickas
 ; Description: Displays two arrays with different values
 ; Attribution: JavaScript: The Definitive Guide, 7th Edition by David Flanagan Published by O'Reilly Media, Inc., 2020 
