@@ -27,8 +27,6 @@ function getState(String1, String2){
     if (String1 == String2){
         return true;
     }
-    else
-    return false;
 }
 
 // Value that we are looking to filter
