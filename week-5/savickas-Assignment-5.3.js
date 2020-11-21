@@ -14,7 +14,7 @@ const header = require('../week-2/Savickas-header')
 let headerValue = header.display("Grayton", "Savickas", "Exercise 5.3")
 console.log(headerValue + "\n");
 
-// Start of Program
+// start of program
 
 // Array like object that stores the first and last names of famous composers along with their genre and rating
 const famousComposers = [
@@ -52,3 +52,5 @@ const famousComposers = [
 
   // Output of famousComposers
   famousComposers.forEach(function(composer){console.log('LastName: ' + composer.lastName+ ' Genre: ' + composer.genre + ' Rating ' + composer.rating)});
+
+  // end program
