@@ -52,7 +52,3 @@ const famousComposers = [
 
   // Output of famousComposers
   famousComposers.forEach(function(composer){console.log('LastName: ' + composer.lastName+ ' Genre: ' + composer.genre + ' Rating ' + composer.rating)});
-
-//   for (i=0; i<famousPoets.length; i++){
-//       console.log(famousPoets[i].firstName + ' ' + famousPoets[i].lastName + ' was a ' + famousPoets[i].genre + ' composer with a rating of ' + famousPoets[i].rating)
-//   }
