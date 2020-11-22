@@ -69,3 +69,5 @@ console.log('-- COMPOSER BY GENRE --' +'\n')
     composerGenre.forEach(function(composer) {
       console.log(composer);
   });
+
+  // end program
