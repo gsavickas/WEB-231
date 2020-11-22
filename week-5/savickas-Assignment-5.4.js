@@ -2,7 +2,7 @@
 ============================================
 ; Title:  Array like object collection
 ; Author: Grayton Savickas
-; Date:   18 Nov 2020
+; Date:   21 Nov 2020
 ; Modified By: 
 ; Description: Construct array like objects that store key value pairs
 ; Attribution: 
@@ -11,7 +11,7 @@
 ;===========================================
 */
 const header = require('../week-2/Savickas-header')
-let headerValue = header.display("Grayton", "Savickas", "Exercise 5.3")
+let headerValue = header.display("Grayton", "Savickas", "Exercise 5.4")
 console.log(headerValue + "\n");
 
 // start of program
@@ -49,10 +49,23 @@ const famousComposers = [
         rating: '10'
     }
   ];
+  console.log('-- COMPOSER BY RATING --' +'\n')
+// Filters famousComposers using the map function to separate ratings and assign them to the composerRating
+  let composerRating = famousComposers.map(function(composer){
+      return 'Rating: ' + composer.rating + '\n' + 'Composer: ' + composer.lastName + '\n'
+  } );
+// Output composerRatings
+  composerRating.forEach(function(composer) {
+      console.log(composer);
+  });
 
-  // Output of famousComposers by lastName, genre, and rating using the forEach function
-  famousComposers.forEach(function(composer){
-      console.log('LastName: ' + composer.lastName+ ' Genre: ' + composer.genre + ' Rating ' + composer.rating)
-    });
+console.log('-- COMPOSER BY GENRE --' +'\n')
 
-  // end program
+// Filters famousComposers using the map function to separate ratings and assign them to the composerGenre
+  let composerGenre = famousComposers.map(function(composer){
+      return 'Genre: ' + composer.genre + '\n' + 'Composer: ' + composer.lastName + '\n'
+  } );
+// Output composerGenre
+    composerGenre.forEach(function(composer) {
+      console.log(composer);
+  });
