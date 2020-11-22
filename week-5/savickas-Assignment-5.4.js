@@ -61,7 +61,7 @@ const famousComposers = [
 
 console.log('-- COMPOSER BY GENRE --' +'\n')
 
-// Filters famousComposers using the map function to separate ratings and assign them to the composerGenre
+// Filters famousComposers using the map function to separate genres and assign them to the composerGenre
   let composerGenre = famousComposers.map(function(composer){
       return 'Genre: ' + composer.genre + '\n' + 'Composer: ' + composer.lastName + '\n'
   } );
