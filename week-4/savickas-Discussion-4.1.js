@@ -22,3 +22,4 @@ let testArray2 = [..."123456789"];
 // Output
 console.log(testArray1);
 console.log(testArray2);
+
