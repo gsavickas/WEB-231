@@ -1,65 +1,32 @@
 /*
 ============================================
-; Title: Pinson-Discussion 6.1.js
-; Author: James Pinson
-; Date: November 23rd 2020
-; Description: This assignment creates a object literal with two or more errors.
-;============================================
+; Title:  welchcronin-discussion 6.1.js
+; Author: Georgia Welch Cronin
+; Date:   25 November 2020
+; Modified By: Grayton Savickas
+; Additional ideas for code from https://www.w3schools.com/js/js_objects.asp
+; Description: Creating a simple Javascript program using object properties with 2 errors
+;===========================================
 */
 
+// const header = require('../welchcronin-header.js');
 
-/*
---EXPECTED OUTCOME--
---EMPLOYEE LOG--
-Department: Retail Banking 
-Location: Central-Tennessee 
-Employee: John Matthews
-ID: 222456
-Position: Personal Banker
-Pay Grade: 41
-*/
+// console.log(header.display("Georgia", "WelchCronin", "Discussion 6.1"));
+// console.log('\n'); //Here I am adding a line break between header and exercise output.
 
+//start program
 
-//This is the start of the program. 
+//creating an object with several name value pairs
+// Correction: The notation [] used in arrays and accessing elements of an array. Here we are trying to create an Object so we use ({ }) notation instead
+let nuts = ({
+  type:"Almonds", 
+  protein:"21 grams", 
+  fat:"50 grams"
+});
 
+//output some of the data
+// Correction: missing spaces before "contain" and of "of fat."
+console.log(nuts.type + " contain " + nuts.protein + " of protein and " + nuts.fat + " of fat.")
 
-//This is the object literal department with fields name & location. 
-// Correction: when declaring an object you must first use > const department ({Key value: pair}); > you were missing the ()
-const department = ({
-  
-    name: "Retail Banking",
-  
-    location: "Central-Tennessee",
-  
-//This is the nested object literal employee with fields id, firstName, lastName, jobTitle, and payGrade.
-// Correction:  Missing comma after lastName: "Matthews". Key value pairs must be separated by commas due to syntax
-    employee: {
-  
-      id: 222456,
-  
-      firstName: "John",
-  
-      lastName: "Matthews",
-  
-      jobTitle: "Personal Banker",
-
-
-      payGrade: "41"
-
-
-
-    }
-  });
-
-
-//This is where I call my object literal and nested object literal fields in the desired format. 
-// Correction: Missing syntax "+" after Grade:" 
-// Correction: department.firstName must be changed to department.employee.firstName to access the nested objects key value pair
-  console.log (" --EMPLOYEE LOG--");
-  console.log ("Department: " + department.name + " \nLocation: " + department.location + 
-                " \nEmployee: " + department.employee.firstName + " " + department.employee.lastName + "\nID: " + department.employee.id + 
-                "\nPosition: " + department.employee.jobTitle + "\nPay Grade: " + department.employee.payGrade)
-
-
-//This is the end of the program.
-
+//expected output: 
+// Almonds contain 21 grams of protein and 50 grams of fat.
