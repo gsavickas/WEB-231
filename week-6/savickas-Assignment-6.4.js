@@ -40,3 +40,5 @@ y = x.toDateString();
 // displays output
 console.log("Ticket " + ticket.id + " was created on " + y + " assigned to employee " + ticket.person.firstName +
  " " + ticket.person.lastName + " (" + ticket.person.jobTitle + ").");
+
+ // end of program
