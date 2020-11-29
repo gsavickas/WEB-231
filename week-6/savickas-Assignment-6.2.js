@@ -10,7 +10,7 @@
 ;===========================================
 */
 const header = require('../week-2/Savickas-header')
-let headerValue = header.display("Grayton", "Savickas", "Discussion 6.2")
+let headerValue = header.display("Grayton", "Savickas", "Assignment 6.2")
 console.log(headerValue + "\n");
 
 // start of program
@@ -18,8 +18,8 @@ console.log(headerValue + "\n");
 try {
 
     let x = 3
-
     let y = "two"
+
 // squared stores x to the power of y using Math.pow method
     let squared = Math.pow(x, y)
     
