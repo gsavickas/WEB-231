@@ -25,7 +25,7 @@ let nuts = ({
 });
 
 //output some of the data
-// Correction: missing spaces before "contain" and of "of fat."
+// Correction: missing spaces before "contain" and of "of fat." to meet expected output
 console.log(nuts.type + " contain " + nuts.protein + " of protein and " + nuts.fat + " of fat.")
 
 //expected output: 
