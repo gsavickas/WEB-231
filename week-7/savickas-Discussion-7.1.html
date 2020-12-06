@@ -1,0 +1,45 @@
+<!-- 
+/*
+============================================
+; Title:  JavaScript in Web Browsers Discussion 7.1
+; Author: Grayton Savickas
+; Date:   28 Nov 2020
+; Modified By: 
+; Description: Program that how to use Java Script selectors to alter the Display Object Model (DOM)
+; Attribution: 
+; - JavaScript: The Definitive Guide, 7th Edition by David Flanagan Published by O'Reilly Media, Inc., 2020 
+; - w3Schools: https://www.w3schools.com/js/DEFAULT.asp
+;===========================================
+*/
+-->
+
+<!-- Start of Program -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript in Web Browsers Discussion 7.1</title>
+    <style>
+        #title-1{
+            background-color: #ddddff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title-1" >Hello World</h1>
+<script>
+    // This method adds an event to the background that listens for a click on the title
+    // then the method calls the changeTitleBackgroundColor function below
+    document.getElementById("title-1").addEventListener("click", changeTitleBackgroundColor);
+
+    // This function change the title background from light blue to red
+    function changeTitleBackgroundColor(){
+        let title = document.querySelector("#title-1");
+        title.setAttribute('style', 'background-color: red;')
+    };
+    
+</script>
+</body>
+</html>

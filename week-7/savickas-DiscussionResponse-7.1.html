@@ -1,0 +1,63 @@
+
+
+<!-- /*
+============================================
+; Title:  fulfs-discussion-7.1.js
+; Author: Perry Fulfs
+; Date:   1 December 2020
+; Modified By: Grayton Savickas
+; Using ES5 standards and building Array-Like Object collections
+===========================================
+*/
+
+const header = require('../fulfs-header.js'); // added file from root directory
+
+console.log(header.display("Perry", "Fulfs", "Discussion 7.1")); //  content with actual name & assignment name
+
+console.log(" ") // adding a space between header & rest of code
+
+// =========================================== -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>fulfs-discussion-7.1-DOM Interaction</title>
+  <!-- <script src="fulfs-discussion-7.1.js" defer></script> -->
+</head>
+<body>
+    <h1>This here is a header.</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <ol>
+        <li id="listOne">List Item Number One/1</li>
+        <li>List Item Number Two/2</li>
+        <li id="listThree">List Item Number Three/3</li>
+        <li>List Item Number Four/4</li>
+        <li>List Item Number Five/5</li>
+    </ol>
+<!-- Correction: myListFunc is not a function, and the desired function is myFunc -->
+    <button onclick="myFunc()">Click to Change List</button>
+
+    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p> 
+<script>
+    /* 
+    Expected output when button on HTML page is clicked:
+    
+    List Item Number One/1
+    List Item Number Two/2
+    Change The Third LI!
+    List Item Number Four/4
+    List Item Number Five/5
+    */
+    //Correction: setcontent is not a valid method. Instead use innerHTML to alter content of HTML tags
+    function myFunc() {
+        let x = document.getElementById("listThree").innerHTML = ' The Third LI! ';
+      }
+</script>
+</body>
+</html>
+

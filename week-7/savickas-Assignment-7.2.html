@@ -1,0 +1,51 @@
+<!-- 
+/*
+============================================
+; Title:  Constructor Functions Assignment 7.2
+; Author: Grayton Savickas
+; Date:  6 Dec 2020
+; Modified By: 
+; Description: Program that how to use Java Script selectors to alter the Display Object Model (DOM)
+; Attribution: 
+; - JavaScript: The Definitive Guide, 7th Edition by David Flanagan Published by O'Reilly Media, Inc., 2020 
+; - w3Schools: https://www.w3schools.com/js/DEFAULT.asp
+;===========================================
+*/
+-->
+
+<!-- Start of Program -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB 231 - Constructor Functions</title>
+</head>
+<body>
+
+    <script>
+        employeeList = [
+            new employee(421, "Grayton", "Savickas", "Supervisor"),
+            new employee(422, "Bobby", "Hill", "Cook"),
+            new employee(423, "Sarah", "Conner", "Analyst"),
+            new employee(424, "Joe", "Dirt", "Labor"),
+            new employee(425, "Doom", "Slayer", "Weapon")
+        ];
+
+        // Creates an constructor for a new employee object with 4 different parameters
+        function employee(id, firstName, lastName, title){
+            this.id = id;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.title = title;
+        }
+
+        console.log(employeeList)
+
+        employeeList.forEach(element => {
+            console.log(element)
+        });
+    </script>
+</body>
+<!-- End of Program -->
+</html>

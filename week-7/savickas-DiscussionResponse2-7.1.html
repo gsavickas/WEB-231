@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang ="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Marble - Discussion 7.1 </title>
+    <style>
+      /* Styling for web page*/
+      body{
+        text-align: justify;
+        margin-top: 200px;
+      }
+      /*Setting the Transparent Class */
+      .transparent{
+        opacity: 0;
+      }
+      /*Setting the Visible Class */
+      .visible{
+        opacity: 100;
+      }
+    </style>
+    <body>
+        <!-- Correction: missing Id of "clock" -->
+      <h1 id="clock" >If you correct the code, you should see the time.....</h1>
+    </body>
+    <script>
+        //Displaying the time on the WebPage
+        // Correction: misspelling of document, getElementById and date
+        function time(){
+          let element = document.getElementById("clock");
+          let date = new Date();
+          element.innerHTML = date.toLocaleTimeString();
+          setTimeout(time, 25);
+        }
+        function hidden(){
+          let beforeClick = time();
+          beforeTime.class = "transparent";
+        }
+        function show(){
+          let afterClick = time();
+          afterClick.className = "visible";
+        }
+        // To Start Displaying the time.
+        window.onLoad = hidden();
+        document.getElementById().onclick = show();
+      </script>
+  </head>
+</html>
+
+
