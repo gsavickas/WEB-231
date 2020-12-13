@@ -1,0 +1,84 @@
+<!-- 
+/*
+============================================
+; Title:  Dynamic HTML 8.2
+; Author: Grayton Savickas
+; Date:  13 Dec 2020
+; Modified By: 
+; Description: Alter HTML with jQuery dynamically
+; Attribution: 
+; - JavaScript: The Definitive Guide, 7th Edition by David Flanagan Published by O'Reilly Media, Inc., 2020 
+; - w3Schools: https://www.w3schools.com/js/DEFAULT.asp
+;===========================================
+*/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 8.2</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/site.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style type="text/css">
+        body{
+            font-family: 'Roboto', sans-serif;
+        }
+        ul {
+        content: center;
+        margin: 0, auto;
+        font-family: 'Roboto', sans-serif;
+        }
+        #navbar {
+            width: 100%;
+            overflow: hidden;
+            background-color: darkkhaki;
+        }
+        #fruits{
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="navbar">
+        <h1>All the Fruits</h1>
+    </div>
+    <div id="fruits">
+        
+    </div>
+    <!--  -->
+    <script>
+        let out = "";
+        let fruitArr = [
+           {
+               "id": 1,
+               "type": "Apple"
+           },
+           {
+               "id": 2,
+               "type": "Banana"
+           },
+           {
+               "id": 3,
+               "type": "Orange"
+           },
+           {
+               "id": 4,
+               "type": "Lemon"
+           },
+           {
+               "id": 5,
+               "type": "Tomato"
+           }
+        ];
+
+        for (var i = 0; i < fruitArr.length; i++){
+            out += "<li>" + fruitArr[i].id + " " + fruitArr[i].type + "</li>"
+        }
+        
+        document.getElementById('fruits').innerHTML ="<ul>" + out + "</ul>";
+    </script>
+</body>
+</html>
