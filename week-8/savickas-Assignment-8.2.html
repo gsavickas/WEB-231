@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/site.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Provides style to the list and navbar -->
     <style type="text/css">
         body{
             font-family: 'Roboto', sans-serif;
@@ -41,14 +42,14 @@
     </style>
 </head>
 <body>
-
+<!-- Section where the navbar is -->
     <div id="navbar">
         <h1>All the Fruits</h1>
     </div>
     <div id="fruits">
         
     </div>
-    <!--  -->
+    <!-- Script that adds javascript -->
     <script>
         let out = "";
         let fruitArr = [
@@ -73,11 +74,11 @@
                "type": "Tomato"
            }
         ];
-
+        // Adds items from the fruit list and combines them into an html readable string
         for (var i = 0; i < fruitArr.length; i++){
             out += "<li>" + fruitArr[i].id + " " + fruitArr[i].type + "</li>"
         }
-        
+        // Prints output of above for loop with the innerHTML method
         document.getElementById('fruits').innerHTML ="<ul>" + out + "</ul>";
     </script>
 </body>
