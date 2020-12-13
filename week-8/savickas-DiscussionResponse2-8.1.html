@@ -1,0 +1,51 @@
+<!-- 
+============================================
+; Title:  fulfs-discussion-8.1.html
+; Author: Perry Fulfs
+; Date:   8 December 2020
+; Modified By: Perry Fulfs
+; Description: Demonstrates the use of client-side inline JavaScript functions
+=========================================== 
+-->
+
+<!-- 
+  Expected output: 
+  There should be a green box & when you click it should show this text above the green box:
+  This is Green Box!! 
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <title>fulfs-discussion-8.1</title>
+ 
+   <!-- you will need to the href to point to your root directories css & jquery file -->
+   <link rel="stylesheet" href="../CSS/site.css">
+   <!-- <script src="../jquery-3.5.1.js"></script> -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ </head>
+ <body>
+ 
+   <script type = "text/javascript" language = "javascript">
+     $(document).ready(function() {
+         // Correction: Changed from div to greenbox id
+        $("#greenbox").click(function () {
+           var content = $().html();
+           // Correction: Changed text to css styling. 
+           $("#result").css( 'display', 'block' );
+        });
+     });
+  </script>
+ 
+ <p>Click on the box below:</p>
+ <!-- Moved Text from div to this span so it appears above the green box -->
+ <span id = "result" style="display: none;"> This is Green Box!! </span>
+ <!-- Had to change size attributes so there is an area to click -->
+ <div id = "greenbox" style = "background-color:green; width:100px; height:50px;">
+    
+ </div>
+ 
+ 
+ </body>
+ </html>
