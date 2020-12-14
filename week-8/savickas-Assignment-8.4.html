@@ -56,15 +56,18 @@
         let output = "";
         let tableTitle = " <tr><th>Id</th> <th>First Name</th> <th>Last Name</th> <th>Title</th> </tr> ";
 
+        // This will add all employeeList array items into variable output
         for (var i = 0; i < employeeList.length; i++){
             output += "<tr>" + "<td> " + employeeList[i].id + " </td>" + "<td>" + employeeList[i].firstName + " </td>" + "<td>" + employeeList[i].lastName + " </td>" + "<td>" + employeeList[i].title + " </td>" +"</tr>"
         }
         console.log(output);
+        // This will output that table
         document.getElementById('emps').innerHTML ="<table>" + tableTitle + output + "</table>";
 
         // jQuery onClick event
         // Don't remove this, just add your code to the body of the event (curly braces)
         $(function () {
+            // This function will capture the id number and supply it to the getEmployee method
             $("table tr").click(function () {
                 let selectedEmp = $(this).find('td:first').html()
                 getEmployee(selectedEmp)
