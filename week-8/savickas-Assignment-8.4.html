@@ -1,0 +1,91 @@
+<!-- 
+/*
+============================================
+; Title:  jQuery 8.4
+; Author: Grayton Savickas
+; Date:  13 Dec 2020
+; Modified By: 
+; Description: Alter HTML with jQuery dynamically
+; Attribution: 
+; - JavaScript: The Definitive Guide, 7th Edition by David Flanagan Published by O'Reilly Media, Inc., 2020 
+; - w3Schools: https://www.w3schools.com/js/DEFAULT.asp
+;===========================================
+*/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Assignment 8.3</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/site.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<style>
+    #highlight{
+        background-color: lightyellow;
+    }
+</style>
+<body>
+    <div id='emps'></div>
+    <script>
+        employeeList = [
+            new employee(421, "Grayton", "Savickas", "Supervisor"),
+            new employee(422, "Bobby", "Hill", "Cook"),
+            new employee(423, "Sarah", "Conner", "Analyst"),
+            new employee(424, "Joe", "Dirt", "Labor"),
+            new employee(425, "Doom", "Slayer", "Weapon")
+        ];
+        function employee(id, firstName, lastName, title){
+            this.id = id;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.title = title;
+        }
+        function getEmployee(id){
+            employeeList.forEach(element => {
+                if (element.id == id){
+                    alert(element.id + " " + element.firstName +" " + element.lastName +" " + element.title)
+                }
+            });
+        }
+
+        let output = "";
+        let tableTitle = " <tr><th>Id</th> <th>First Name</th> <th>Last Name</th> <th>Title</th> </tr> ";
+
+        for (var i = 0; i < employeeList.length; i++){
+            output += "<tr>" + "<td> " + employeeList[i].id + " </td>" + "<td>" + employeeList[i].firstName + " </td>" + "<td>" + employeeList[i].lastName + " </td>" + "<td>" + employeeList[i].title + " </td>" +"</tr>"
+        }
+        console.log(output);
+        document.getElementById('emps').innerHTML ="<table>" + tableTitle + output + "</table>";
+
+        // jQuery onClick event
+        // Don't remove this, just add your code to the body of the event (curly braces)
+        $(function () {
+            $("table tr").click(function () {
+                let selectedEmp = $(this).find('td:first').html()
+                getEmployee(selectedEmp)
+            })
+        });
+        // This was really hard to figure out
+        // This code will apply a highlighted color on hover
+        // and add back the original color stored in the variable color
+        let color
+        $(function(){
+            $("table tr").hover(
+
+                function(){
+                    color = $(this).css("background-color");
+                $(this).css("background-color", "lightyellow")
+            },
+                function(){
+                    {$(this).css("background", color)
+                }  
+                });
+        });
+    </script>
+</body>
+</html>
